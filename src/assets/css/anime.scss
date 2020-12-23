@@ -1,0 +1,62 @@
+// 旋转
+  /* Chrome, Safari, Opera */
+@-webkit-keyframes rotate {
+  100% {-webkit-transform: rotate(360deg);}
+}
+/* Standard syntax */
+@keyframes rotate {
+  100% {transform: rotate(360deg);}
+}
+
+.rotate-img:hover {
+  -webkit-animation: rotate 5s infinite;
+  animation: rotate 1s infinite;
+  animation-iteration-count:1
+}
+
+// 淡入
+@-webkit-keyframes fadeInAnimation {
+  0% { 
+    opacity: 0; 
+} 
+100% { 
+    opacity: 1; 
+ } 
+}
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+}
+
+// 向上淡入
+@keyframes moveUp {
+  from {
+      top: 120px;
+      opacity: 0;
+      filter: alpha(opacity=0);
+  }
+  
+  to {
+      top: 0px;
+      opacity: 1;
+      filter: alpha(opacity=100);
+  }
+}
+
+@-webkit-keyframes moveUp {
+  from {
+      top: 120px;
+      opacity: 0;
+      filter: alpha(opacity=0);
+  }
+
+  to {
+      top: 0px;
+      opacity: 1;
+      filter: alpha(opacity=100);
+  }
+}

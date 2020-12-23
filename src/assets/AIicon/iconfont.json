@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1256",
+      "name": "语音",
+      "font_class": "yuyin",
+      "unicode": "f0147",
+      "unicode_decimal": 983367
+    },
+    {
+      "icon_id": "688060",
+      "name": "查找 表单 列表",
+      "font_class": "chazhaobiaodanliebiao",
+      "unicode": "e76a",
+      "unicode_decimal": 59242
+    },
+    {
+      "icon_id": "1881557",
+      "name": "图形图像处理",
+      "font_class": "tuxingtuxiangchuli",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "4807117",
+      "name": "人工智能",
+      "font_class": "rengongzhineng",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "6965088",
+      "name": "人工智能",
+      "font_class": "rengongzhineng1",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "11372768",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e8c5",
+      "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "11754481",
+      "name": "对话",
+      "font_class": "V",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    },
+    {
+      "icon_id": "12711374",
+      "name": "人工智能大脑",
+      "font_class": "rengongzhinengdanao",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    }
+  ]
+}
