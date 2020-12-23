@@ -1,50 +1,35 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-Vue.use(Router)
+import VueRouter from 'vue-router'
 
-export default new Router({
-  routes: [
-    {
-      path: '*',
-      redirect: '/'
-    }, {
-      path: '/',
-      name: 'PageView',
-      component: resolve => require(['@/view/PageView'], resolve),
-      children: [
-        {
-          path: '/',
-          redirect: '/home'
-        }, {
-          path: '/home',
-          name: 'home',
-          component: resolve => require(['@/view/HomePage'], resolve),
-          meta: {
-            title: '首页'
-          }
-        }, {
-          path: '/software',
-          name: 'software',
-          component: resolve => require(['@/view/Software'], resolve),
-          meta: {
-            title: '软件产品'
-          }
-        }, {
-          path: '/companyintroduction',
-          name: 'companyintroduction',
-          component: resolve => require(['@/view/CompanyIntroduction'], resolve),
-          meta: {
-            title: '公司介绍'
-          }
-        }, {
-          path: '/contactus',
-          name: 'contactus',
-          component: resolve => require(['@/view/ContactUs'], resolve),
-          meta: {
-            title: '联系我们'
-          }
-        }
-      ]
-    }
-  ]
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: "/",
+    name: 'HomePage',
+    component: () => import('../views/HomePage.vue')
+  },
+  {
+    path: "/homePage",
+    name: 'HomePage',
+    component: () => import('../views/HomePage.vue')
+  },
+  {
+    path: "/ai",
+    name: "AIView",
+    component: () => import('../views/AIProducts.vue')
+  },
+  {
+    path: '/aboutUs',
+    name: 'AboutUs',
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutUs.vue')
+  }
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
 })
+
+export default router

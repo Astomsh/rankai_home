@@ -1,17 +1,35 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <router-view/>
-    <Footer></Footer>
-    <GoTop></GoTop>
-  </div>
+  <v-app>
+    <div id="header">
+      <Header />
+    </div>
+    <Content />
+    <Footer />
+  </v-app>
 </template>
-
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+  components: {
+    Header: () => import("@/components/Header"),
+    Content: () => import("@/components/Content"),
+    Footer: () => import("@/components/Footer")
+  },
+  data: () => ({}),
+  mounted() {
+    window.addEventListener("unload", this.saveState);
+  },
+  methods: {
+    saveState() {
+      sessionStorage.setItem("state", JSON.stringify(this.$store.state));
+    }
+  }
+};
 </script>
-
-<style>
+<style  lang="scss" scoped >
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
 </style>

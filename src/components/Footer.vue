@@ -1,72 +1,91 @@
 <template>
-  <div id="footer" class="container-fluid">
-    <p class="address_tel_fax">
-      <span>地址：公司地址公司地址公司地址公司地址</span>
-      <span>Tel：888-888-888</span>
-      <span>Fax：8888-88888888</span>
-    </p>
-    <p class="email_wx">
-      <span>邮箱：liyunkun_11@163.com</span>
-      <span>公司微信号：ilyk_gg</span>
-    </p>
-    <p class="copy">Copyright &copy; 2018 - 2019 公司名称公司名称</p>
-  </div>
+  <v-footer dark>
+    <v-container>
+      <v-row class="mobile-display">
+        <v-col cols="12" class="align-center mr-3">
+          <v-row >
+            <v-col cols="12" md="4">
+              <v-row>
+                <v-img
+                  class="shrink mr-2"
+                  contain
+                  src="../assets/images/logo2.png"
+                  width="200"
+                />
+              </v-row>
+              <v-row style="margin-top: 20px">
+                <p>{{ $t("i18n.footerText") }}</p>
+              </v-row>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-row>{{ $t("i18n.follow") }}</v-row>
+              <v-row style="margin-top: 20px">
+                <div class="d-flex float-right">
+                  <v-img
+                    class="shrink mr-2 mobile-display"
+                    contain
+                    src="../assets/images/gzh.jpg"
+                    width="120"
+                    title="关注公众号"
+                    style="cursor: pointer"
+                  />
+                </div>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+      <v-row class="font-weight-thin text-center">
+        <v-col
+          cols="24"
+          class="align-center mr-3"
+          style="padding: 50px 0px 0px 0px"
+        >
+          <span class="mx-3">{{ $t("i18n.copyright") }}</span>
+          <span class="mx-3">{{ $t("i18n.company") }}</span>
+          <span class="mx-3">
+            <a
+              style="display: inline-block; text-decoration: none; color: #fff"
+              rel="nofollow"
+              href="http://www.beian.miit.gov.cn"
+              target="_blank"
+            >
+              <p style="margin-bottom: 0px !important">
+                {{ $t("i18n.record") }}
+              </p>
+            </a>
+          </span>
+          <span class="mx-3">
+            <a
+              target="_blank"
+              href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34019202000912"
+              style="
+                display: inline-block;
+                text-decoration: none;
+                height: 20px;
+                line-height: 20px;
+                color: #fff;
+              "
+            >
+              <img
+                src="../assets/images/beian.png"
+                style="float: left; margin-right: 5px"
+              />
+              <p style="white-space: nowrap">{{ $t("i18n.record2") }}</p>
+            </a>
+          </span>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-footer>
 </template>
+
 <script>
 export default {
   name: "Footer",
-  data() {
-    return {};
-  }
+  data: () => ({}),
+  methods: {},
 };
 </script>
 <style scoped>
-#footer {
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background: #474747;
-  overflow: hidden;
-  text-align: center;
-}
-.logo {
-  width: 95px;
-  height: 45px;
-  margin: 50px auto 20px;
-}
-.title {
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-.address_tel_fax {
-  color: #d3d3d3;
-  font-size: 14px;
-  margin: 10px 0;
-}
-.email_wx {
-  color: #d3d3d3;
-  font-size: 14px;
-}
-.copy {
-  color: #d3d3d3;
-  font-size: 14px;
-  margin: 50px 0 10px;
-}
-@media screen and (max-width: 997px) {
-  .title {
-    font-size: 20px;
-  }
-  .address_tel_fax {
-    font-size: 12px;
-  }
-  .email_wx {
-
-  font-size: 12px;
-}
-.copy {
-  font-size: 12px;
-  margin: 30px 0 10px;
-}
-}
-</style>
-
+</style>>

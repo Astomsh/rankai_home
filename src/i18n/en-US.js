@@ -147,5 +147,27 @@ export const i18n = {
     partner: "Partners",
     more1:"Download Now",
     more2:"Access openSource Code ",
-    partners:[]
+    partners:[
+        {
+            icon: require("../assets/images/guochuang.png"),
+            url: "http://www.kdgcsoft.com/",
+            name: "GUOCHUANG"
+        },
+        {
+            icon: require("../assets/images/jingchang.png"),
+            url: "https://jccdex.cn/#/",
+            name: "JCCDex"
+        },
+        {
+            icon: require("../assets/images/gaoshan.png"),
+            url: "https://gaoshantech.com/#/",
+            name: "GaoShanTC"
+        },
+        {
+            icon:require("../assets/images/moac.png"),
+            url: "http://www.moacchina.net/",
+            name:"MOAC"
+        },
+
+    ]
 }
