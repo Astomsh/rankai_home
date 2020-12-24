@@ -66,13 +66,7 @@
     >
       <v-list>
         <v-list-item @click="gotoPage('homePage')">{{ $t('i18n.homePage') }}</v-list-item>
-        <v-list-item
-          @click="gotoPage('blockChain')"
-        >{{ $t('i18n.blockChain') }}</v-list-item>
         <v-list-item @click="gotoPage('ai')">{{ $t('i18n.ai') }}</v-list-item>
-         <v-list-item
-          @click="gotoPage('products')"
-        >{{ $t('i18n.products') }}</v-list-item>
         <v-list-item @click="gotoPage('aboutUs')">{{ $t('i18n.aboutUs') }}</v-list-item>
       </v-list>
     </v-navigation-drawer>

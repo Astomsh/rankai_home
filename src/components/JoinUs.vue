@@ -6,8 +6,6 @@
     <v-responsive class="mx-auto mb-6" style="text-align: left;">
         <a target="_blank" href="https://company.zhaopin.com/CZ836231620.htm?srccode=401901&preactionid=13755004-5a15-4e6a-9f09-02897cf2739b" >
         {{$t('i18n.clickToOffers')}}</a>
-      <!-- <v-divider class="mb-1"></v-divider>
-      <v-divider></v-divider> -->
     </v-responsive>
     </v-container>
   </section>
