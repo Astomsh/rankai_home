@@ -9,15 +9,9 @@
         style="color: #012375;text-indent: 32px;"
       >
         <v-row>
-          <v-col cols="12" md="6">
-            <img
-              src="../assets/images/bg001.jpg"
-              style="height: 300px;width: 300px;float: left;margin-right: 90px;"
-            />
-          </v-col>
-          <v-col cols="12" md="6">
-            <p>{{$t('i18n.introductionText1')}}</p>
-            <p>{{$t('i18n.introductionText2')}}</p>
+          <v-col cols="12" md="12">
+            <p style="font-Size:20px;">{{$t('i18n.introductionText1')}}</p>
+            <p style="font-Size:20px;">{{$t('i18n.introductionText2')}}</p>
           </v-col>
         </v-row>
       </v-responsive>

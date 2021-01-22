@@ -9,7 +9,6 @@
         font-size: 30px;
         min-width: 250px;
         white-space: nowrap;
-        font-style: oblique;
     }
     .parallax-background {
         height: 300px !important;
@@ -48,7 +47,7 @@
         margin-top: 56px !important;
         text-align: center;
         height: 38px !important;
-        background: #1a76d2 !important;
+        background: #019fe8 !important;
     }
 }
 .title-btn {
@@ -59,7 +58,7 @@
     font-size: 18px !important;
     font-weight: 500;
     :active {
-        color: #0050a0;
+        color: #019fe8;
     }
 }
 #home {
@@ -67,20 +66,15 @@
 }
 .item-title {
     padding: 10px;
-    color: #0050a0;
+    color: #019fe8;
     height: 60px;
     background-size:100% 100%;
-}
-.item-content {
-    background-image: url('../images/item-background.png');
-    background-size: 100% auto;
-    background-position: bottom;
 }
 .content-light {
     border: 1px solid #019fe8 !important;
 }
 .content-light:hover{
-    box-shadow: #0050a0 0 0 15px;
+    box-shadow: #019fe8 0 0 15px;
 }
 
 .content-light2 {
@@ -91,14 +85,6 @@
 }
 .anchorBL {
     display: none;
-}
-.block-title-bg002 {
-    background: url('../images/bg002.png') repeat 0px 0px;
-    background-size: auto 300px;
-}
-.block-title-bg003 {
-    background: url('../images/bg003.png') repeat 0px 0px;
-    background-size: auto 300px;
 }
 .title-label {
     font-size: 45px !important;

@@ -2,10 +2,10 @@
   <div class="about">
     <section
       class="parallax-background mobile-display"
-      style="height:400px;background: rgb(37, 150, 246);"
+      style="height:400px;background: rgb(143 237 254);"
     >
       <div
-        style="height:300px;background: rgb(37, 150, 246);display: flex;justify-content: flex-end;"
+        style="height:300px;background: rgb(143 237 254);display: flex;justify-content: flex-end;"
       >
         <div class="white--text text-left title-label" style="animation: fadeInAnimation ease 3s;">
           <span class="font-weight-medium">{{$t('i18n.ai')}}</span>
@@ -40,7 +40,8 @@
             <v-card class="py-8 px-4 content-light" color="lighten-3" style="height:100%">
               <v-theme-provider dark>
                 <div>
-                  <v-avatar color="primary" size="88">
+                  <v-avatar color="#019fe8"
+                   size="88">
                     <v-icon large v-text="$t('i18n.aiContent')[0].icon"></v-icon>
                   </v-avatar>
                 </div>
@@ -58,7 +59,7 @@
             <v-card class="py-8 px-4 content-light" color="lighten-3" style="height:100%">
               <v-theme-provider dark>
                 <div>
-                  <v-avatar color="primary" size="88">
+                  <v-avatar color="#019fe8" size="88">
                     <v-icon large v-text="$t('i18n.aiContent')[1].icon"></v-icon>
                   </v-avatar>
                 </div>
@@ -76,7 +77,7 @@
             <v-card class="py-8 px-4 content-light" color="lighten-3" style="height:100%">
               <v-theme-provider dark>
                 <div>
-                  <v-avatar color="primary" size="88">
+                  <v-avatar color="#019fe8" size="88">
                     <v-icon large v-text="$t('i18n.aiContent')[2].icon"></v-icon>
                   </v-avatar>
                 </div>

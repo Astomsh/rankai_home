@@ -22,7 +22,7 @@
           :href="`#homePage`"
           @click="gotoPage('homePage')"
         >{{$t('i18n.homePage')}}</v-tab>
-        <v-tab class="title-btn" :href="`#ai`" @click="gotoPage('ai')">{{$t('i18n.ai')}}</v-tab>
+        <v-tab class="title-btn" :href="`#products`" @click="gotoPage('products')">{{$t('i18n.products')}}</v-tab>
         <v-tab
           class="title-btn"
           :href="`#aboutUs`"
@@ -30,7 +30,7 @@
         >{{ $t('i18n.aboutUs') }}</v-tab>
       </v-tabs>
       <v-spacer></v-spacer>
-      <v-btn class="mx-2" fab outlined color="#0050a0" @click="changeLanguage()">{{$t('i18n.lang')}}</v-btn>
+      <v-btn class="mx-2" fab dark color="#019fe8" @click="changeLanguage()">{{$t('i18n.lang')}}</v-btn>
     </v-app-bar>
     <v-app-bar app color="#fff" light src class="pc-display">
       <div class="d-flex align-center mr-3" style="cursor: pointer;">
@@ -41,13 +41,18 @@
         >{{$t('i18n.company')}}</span>
       </div>
       <v-spacer></v-spacer>
-      <v-app-bar-nav-icon light @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-btn
         class="mx-2"
         fab
-        outlined
+        dark
         small
-        color="#0050a0"
+        color="#019fe8" light @click.stop="drawer = !drawer">≡</v-btn>
+      <v-btn
+        class="mx-2"
+        fab
+        dark
+        small
+        color="#019fe8"
         @click="changeLanguage()"
       >{{$t('i18n.lang')}}</v-btn>
     </v-app-bar>
@@ -59,14 +64,14 @@
       app
       flat
       dark
-      color="#0050A0"
+      color="#019fe8"
       temporary
       width="200px"
       overlay-opacity="0.4"
     >
       <v-list>
         <v-list-item @click="gotoPage('homePage')">{{ $t('i18n.homePage') }}</v-list-item>
-        <v-list-item @click="gotoPage('ai')">{{ $t('i18n.ai') }}</v-list-item>
+        <v-list-item @click="gotoPage('products')">{{ $t('i18n.products') }}</v-list-item>
         <v-list-item @click="gotoPage('aboutUs')">{{ $t('i18n.aboutUs') }}</v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -92,19 +97,11 @@ export default {
     this.loadPage();
   },
   methods: {
-    goGithub() {
-      var url = "https://github.com/HFJingchuang";
-      window.open(url);
-    },
     gotoPage(value) {
       var path = "/" + value;
       this.$router.push({ path: path }).catch((error) => error);
       this.closeNav();
-      if (value == "solutions" || value == "productions") {
-        this.set("blockChain");
-      } else {
-        this.set(value);
-      }
+      this.set(value);
     },
     changeLanguage() {
       let local = this.$i18n.locale;
@@ -128,7 +125,11 @@ export default {
       this.$store.dispatch("updateCurrentPage", page);
     },
     loadPage() {
-      this.$store.dispatch("updateCurrentPage", this.$route.path.split("/")[1]);
+      var route = this.$route.path.split("/")[1];
+      if (route ==="" || route === null) {
+        route = "homePage"
+      }
+      this.$store.dispatch("updateCurrentPage", route);
     }
   },
 };

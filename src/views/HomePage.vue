@@ -21,7 +21,7 @@
             >
               <span class="font-weight-light display-1">{{$t('i18n.welcome')}}</span>
               <br />
-              <span class="font-weight-medium welcome-title">{{$t('i18n.company')}}</span>
+              <span class="font-weight-bold welcome-title">{{$t('i18n.company')}}</span>
             </v-col>
           </v-row>
         </v-container>
@@ -35,7 +35,7 @@
             <v-col
               class="white--text text-left"
               cols="12"
-              md="10"
+              md="12"
               style="animation: fadeInAnimation ease 3s"
             >
               <span class="font-weight-medium display-1" >{{$t('i18n.bannerText').first}}</span>
@@ -61,7 +61,7 @@
       </v-responsive>
     </v-container>
   </section>
-    <AIItems style="background: linear-gradient(#ffffff, #b4d4ef, #ffffff);"/>
+    <AIItems />
     <Partners />
   </div>
 </template>

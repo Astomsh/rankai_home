@@ -1,25 +1,25 @@
 <template>
-  <v-footer dark>
+  <v-footer light color="#F5F5F5">
     <v-container>
       <v-row class="mobile-display">
         <v-col cols="12" class="align-center mr-3">
           <v-row >
-            <v-col cols="12" md="4">
-              <v-row>
+            <v-col clos="12" md="1"/>
+            <v-col cols="12" md="2">
                 <v-img
                   class="shrink mr-2"
                   contain
                   src="../assets/images/logo2.png"
                   width="200"
                 />
-              </v-row>
-              <v-row style="margin-top: 20px">
-                <p>{{ $t("i18n.footerText") }}</p>
-              </v-row>
             </v-col>
-            <v-col cols="12" md="4">
+            <v-col cols="12" md="5" style="text-indent: 40px;">
+                <p style="font-size:20px;">{{ $t("i18n.footerText") }}</p>
+            </v-col>
+            <v-col cols="12" md="1"/>
+            <v-col cols="12" md="2">
               <v-row>{{ $t("i18n.follow") }}</v-row>
-              <v-row style="margin-top: 20px">
+              <v-row style="margin-top: 10px">
                 <div class="d-flex float-right">
                   <v-img
                     class="shrink mr-2 mobile-display"
@@ -32,6 +32,7 @@
                 </div>
               </v-row>
             </v-col>
+            <v-col cols="12" md="1"/>
           </v-row>
         </v-col>
       </v-row>
@@ -39,13 +40,13 @@
         <v-col
           cols="24"
           class="align-center mr-3"
-          style="padding: 50px 0px 0px 0px"
+          style="padding: 20px 0px 0px 0px"
         >
           <span class="mx-3">{{ $t("i18n.copyright") }}</span>
           <span class="mx-3">{{ $t("i18n.company") }}</span>
           <span class="mx-3">
             <a
-              style="display: inline-block; text-decoration: none; color: #fff"
+              style="display: inline-block; text-decoration: none; color: #000"
               rel="nofollow"
               href="http://www.beian.miit.gov.cn"
               target="_blank"
@@ -64,7 +65,7 @@
                 text-decoration: none;
                 height: 20px;
                 line-height: 20px;
-                color: #fff;
+                color: #000;
               "
             >
               <img
